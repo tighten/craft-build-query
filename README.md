@@ -1,2 +1,2 @@
-# craft-complex-queries
-Comples queries in Craft using extending the ElementCriteriaModel
+# Complex Queries in Craft
+A plugin for Craft CMS, demonstrating how to make complex queries possible by modifying an `ElementCriteriaModel` using `buildElementsQuery()`.
