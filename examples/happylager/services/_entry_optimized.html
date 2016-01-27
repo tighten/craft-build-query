@@ -1,0 +1,23 @@
+{% extends "_layouts/site" %}
+
+{% block main %}
+
+    <nav class="subnav">
+        <div class="flex">
+            <ul>
+
+                {% set services = craft.entries.section('services') %}
+                {% set work = craft.entries.section('work') %}
+                {% for service in craft.complexQuery.source(services).withRelatedTotals(work).find %}
+                    <li>
+                        <a href="{{ service.url }}" class="subfont">
+                            {{ service.title }} · {{ service.count }}
+                        </a>
+                    </li>
+                {% endfor %}
+
+            </ul>
+        </div>
+    </nav>
+
+{% endblock %}
