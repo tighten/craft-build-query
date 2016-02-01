@@ -1,16 +1,15 @@
 <?php namespace Craft;
 
 /**
- * A plugin for Craft CMS, demonstrating how to make complex queries possible
- * by modifying an ElementCriteriaModel using buildElementsQuery().
+ * Demonstration of how to extend the ElementCriteriaModel
+ * for making complex or optimized queries.
  */
-
-class ComplexQueryPlugin extends BasePlugin
+class BuildQueryPlugin extends BasePlugin
 {
 
     public function getName()
     {
-        return 'ComplexQuery Demo';
+        return 'BuildQuery Demo';
     }
 
     public function getVersion()
