@@ -57,7 +57,7 @@ class BuildQueryService extends BaseApplicationComponent
     {
         $this->addRelationToElementCriteriaModel($relation);
         $this->extendElementCriteriaModel();
-        $this->addCountToQuery('sources1.targetId');
+        $this->addCountToQuery('sources1.targetId', 'workCount');
 
         return $this;
     }
