@@ -4,7 +4,7 @@
 
 A plugin for Craft CMS, demonstrating how to build complex or optimized queries by modifying an **ElementCriteriaModel** using `buildElementsQuery()`.
 
-For background on what this demo plugin is all about, see the post [Craft CMS: Extending the ElementCriteriaModel for Complex Queries](http://blog.tighten.co/craft-cms-extending-the-elementcriteriamodel-for-complex-queries) on the **Tighten.co** blog.
+For background on what this demo plugin is all about, see the post [Craft CMS: Extending the ElementCriteriaModel for Complex Queries](http://blog.tighten.co/craft-cms-building-complex-queries-by-extending-the-elementcriteriamodel) on the **Tighten.co** blog.
 
 ### Installation
 
