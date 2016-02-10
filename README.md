@@ -4,20 +4,20 @@
 
 A plugin for Craft CMS, demonstrating how to build complex or optimized queries by modifying an **ElementCriteriaModel** using `buildElementsQuery()`.
 
-For background on what this demo plugin is all about, see the post [Craft CMS: Extending the ElementCriteriaModel for Complex Queries](http://blog.tighten.co/craft-cms-building-complex-queries-by-extending-the-elementcriteriamodel) on the **Tighten.co** blog.
+For background on what this demo plugin is all about, see the post [Craft CMS: Extending the ElementCriteriaModel for Complex Queries](http://blog.tighten.co/craft-cms-building-complex-queries-by-extending-the-elementcriteriamodel) on the [Tighten.co](http://tighten.co/) blog.
+
+This plugin can be used as a starting point for adding your own advanced query logic, allowing you to perform queries that aren't possible using Craft's built-in methods. Using this plugin as a basis, you can, for instance:
+
+* Add a `join` clause to a query, to search data from a third-party plugin
+* Perform a complex `join` involving data from several tables
+* Optimize a query in order to reduce the number of database queries performed
+* Group, order, and aggregate results at the database level, rather than relying on the `group` filter in your Twig template
 
 ### Installation
 
 Add the `buildquery` folder to your `craft/app/plugins` directory, then activate the BuildQuery plugin in the _Settings_ section of Craft's control panel.
 
 ### Use
-
-This plugin can be used as a starting point for adding your own advanced query logic, allowing you to perform queries that aren't possible using Craft's built-in methods. Using this plugin as a basis, you can, for instance:
-
-* Include data from a third-party plugin in your query
-* Perform a complex join involving data from several tables
-* Optimize a complex search in order to reduce the number of database queries performed
-* Group, order, and aggregate results at the database level rather than relying on the `group` filter in your Twig template
 
 To begin your query, call the `buildQuery` variable from within a Twig template, and pass it an initial ElementCriteriaModel as `source`:
 
