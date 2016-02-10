@@ -63,27 +63,6 @@ class BuildQueryService extends BaseApplicationComponent
     }
 
     /**
-     * Use this as a scaffold for your own query directives.
-     * From your template, it can be chained onto other query directives
-     * after your query has been set up with `craft.buildQuery.source()...`
-     *
-     * @return  BuildQueryService
-     */
-    public function yourOwnMethod()
-    {
-        $this->extendElementCriteriaModel();
-
-        // -----------------------------------------------
-        // Add your own query logic here, using any method
-        // that is available to the `dbCommand` class.
-        //
-        // $this->dbCommand->...
-        // -----------------------------------------------
-
-        return $this;
-    }
-
-    /**
      * Perform the find after the query has been built and return
      * an array of the resulting EntryModels or BuildQueryModels.
      *
@@ -142,6 +121,40 @@ class BuildQueryService extends BaseApplicationComponent
         }
 
         $this->dbCommand->addSelect('count(' . $field . ') AS ' . $alias);
+    }
+
+    /*
+    |--------------------------------------------------------------------------
+    | Add your own query methods here
+    |--------------------------------------------------------------------------
+    |
+    | Use this method as a scaffold for adding your own query directives.
+    | From your template, it can be chained onto other query directives
+    | after your query has been set up with `craft.buildQuery.source()...`
+    |
+    */
+
+    /**
+     * A scaffold for your own query method
+     *
+     * @return  BuildQueryService
+     */
+    public function yourOwnMethod($parameter)
+    {
+        // First, make sure we have a dbCommand object to work with:
+        $this->extendElementCriteriaModel();
+
+        // -----------------------------------------------
+        // Add your own query logic here, using any method
+        // that is available to the `dbCommand` class.
+        //
+        // $this->dbCommand->...
+        // -----------------------------------------------
+
+        // Finally, return this BuildQueryService object,
+        // so we can chain query methods in a template, like:
+        // `craft.buildQuery.source(an_element_criteria_model).yourOwnMethod(parameter).find()`
+        return $this;
     }
 
     /*
