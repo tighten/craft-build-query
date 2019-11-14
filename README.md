@@ -1,8 +1,6 @@
 # Building Complex Queries in Craft CMS
 
-![Tighten.co](https://cloud.githubusercontent.com/assets/357312/12957036/e18f14a2-cff8-11e5-98f3-c36f66c614ee.png)
-
-![Craft Build Query logo](https://raw.githubusercontent.com/tightenco/craft-build-query/master/craft-build-quer-logo.png)
+![Craft Build Query logo](https://raw.githubusercontent.com/tightenco/craft-build-query/master/craft-build-query-logo.png)
 
 A plugin for Craft CMS, demonstrating how to build complex or optimized queries by modifying an **ElementCriteriaModel** using `buildElementsQuery()`.
 
